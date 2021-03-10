@@ -1,0 +1,27 @@
+﻿@model BasketballTournament.Models.Team
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create Your Team</h2>
+
+@using (Html.BeginForm("Create", "Basketballs", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(x => x.TeamName)
+        @Html.TextBoxFor(x => x.TeamName, new { @class="form-control"})
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.PhoneNumber)
+        @Html.TextBoxFor(x => x.PhoneNumber, new { @class="form-control"})
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Email)
+        @Html.TextBoxFor(x => x.Email, new { @class ="form-control"})
+    </div>
+
+    <button type="submit" class="btn btn-danger">Create</button>
+}
+
